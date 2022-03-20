@@ -1,0 +1,782 @@
+/** GENERALES*/
+
+html {
+    scroll-behavior: smooth; /*permite un suavizado del scroll  en el menú de sección de la pagina listening y reading */
+}
+
+/** caja de sección*/
+.box-section {
+    display: block;
+    padding-top: 100px;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+/** caja visible (cartilla, dentro de caja de sección)*/
+.box-card {
+    display: block;
+    width: 88%;
+    margin: 0px auto;
+    background-color: white;
+    padding: 40px;
+    margin-bottom: -55px;
+}
+
+.box-section > .titulos:hover,
+.cajas > .titulos:hover,
+.box-section .box-card > h3 {
+    text-shadow: 0px 0px 7px gray;
+    animation: titulo 10s infinite linear;
+}
+
+.box-section .box-card > h3 {
+    text-shadow: 0px 0px 3px gray;
+}
+
+@keyframes titulo {
+    0% {
+        color: #ffc000;
+    }
+    25% {
+        color: #b53d3d;
+    }
+    50% {
+        color: #2b3647;
+    }
+    75% {
+        color: #02adb5;
+    }
+    100% {
+        color: black;
+    }
+}
+
+/**boton atrás*/
+#atras {
+    display: block;
+    padding-left: 70px;
+}
+
+#atras button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    transition: all 300ms; /*se aplica al boton ya que es el contenedor de la imagen y sus margenes son lo primero que se hace hover, de lo contrario no funciona*/
+}
+
+#atras button img {
+    width: 50px;
+    height: 50px;
+}
+
+#atras button:hover {
+    transform: scale(1.5, 1.5);
+}
+
+#atras button:active {
+    transform: scale(1, 1);
+}
+
+/** PAGINA GET-STARTED*/
+
+#resources {
+    display: block;
+    height: 600px;
+    width: 100%;
+    padding-top: 100px;
+}
+
+#resources .button {
+    display: block;
+    margin-top: 300px;
+    width: 468px;
+    height: 300px;
+    margin: 0px auto;
+}
+
+#resources .button a {
+    display: block;
+    float: left;
+    width: 466px;
+    height: 60px;
+}
+
+#resources .button a {
+    margin-bottom: 40px;
+}
+#resources .button #b1:hover,
+#resources .button #b2:hover,
+#resources .button #b3:hover,
+#resources .button #b4:hover {
+    transform: translateY(-5px);
+}
+
+#resources .button #b1 {
+    background-color: #f1c234;
+}
+
+#resources .button #b2 {
+    background-color: #cf6767;
+}
+
+#resources .button #b3 {
+    background-color: #526683;
+}
+
+#resources .button #b4 {
+    background-color: #4ebeb9;
+}
+
+/** PAGINA LISTENIG & READING*/
+
+#reading > #escucha {
+    display: block;
+    position: absolute;
+    width: 468px;
+    height: 653px;
+    left: 800px;
+}
+
+#reading > #lee {
+    display: block;
+    position: absolute;
+    top: 990px;
+    left: 225px;
+}
+
+#reading aside {
+    display: block;
+    position: fixed;
+    left: 10px;
+    top: 230px;
+    width: 50px;
+    min-height: 150px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 25px;
+    padding: 15px 0px 15px 0px;
+    background-color: #ffc000;
+    box-shadow: 0px 0px 10px rgb(161, 161, 161);
+    transition: all 300ms;
+}
+
+#reading aside:hover {
+    transform: scale(1.1, 1.1);
+}
+
+#reading aside h3 {
+    font-family: Raleway;
+    font-size: 17px;
+}
+
+#reading aside nav a {
+    display: block;
+    font-family: FredokaOne;
+    font-size: 18px;
+    color: white;
+    transform: scale(0.9, 0.9);
+    transition: all 300ms;
+}
+
+#reading aside nav a:hover {
+    color: #b53d3d;
+    transform: scale(1, 1);
+}
+
+#reading aside nav a:active {
+    transform: scale(0.9, 0.9);
+}
+
+#reading div ul > h3 {
+    animation: titulo 10s infinite linear;
+    text-shadow: 0px 0px 3px gray;
+    font-size: 19px;
+    font-family: Raleway;
+    margin-bottom: 20px;
+}
+
+#reading div ul > .reading3 {
+    margin-bottom: 50px;
+}
+
+#reading div ul li {
+    display: block;
+    padding: 40px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    background-color: #02adb5;
+    box-shadow: 0px 10px 15px rgb(161, 161, 161);
+    color: black;
+    transition: all 600ms;
+}
+
+#reading div > ul > li:hover {
+    min-height: 350px;
+    transition: all 600ms;
+}
+
+#reading div > ul > li:hover h3 {
+    display: block;
+    width: 9%;
+    margin-left: 20px;
+    color: white;
+    text-shadow: 0px 0px 3px #081325;
+    transform: scale(1.5, 1.5);
+}
+
+#reading div .text ul {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+#reading div .text ul li {
+    box-shadow: none !important;
+}
+
+#reading div .text ul li p {
+    margin-bottom: 0px;
+    width: 918px;
+    min-height: 170px;
+    transition: all 600ms;
+}
+
+#reading div ul li:hover ul {
+    display: block;
+}
+
+#reading div ul li:hover ul li > p {
+    color: #2b3647;
+    transform: scale(0.9, 0.9);
+    border: none;
+}
+
+#reading div .text ul:hover li p {
+    transform: scale(1, 1);
+}
+
+/** PAGINA CLASS-RESOURCES*/
+
+.box-section > #presentacion {
+    display: block;
+    position: absolute;
+    left: 1180px;
+    bottom: 330px;
+}
+
+.box-section .box-card {
+    padding: 60px 0px 40px 0px !important;
+}
+
+.box-section .classResources {
+    margin-bottom: -20px;
+}
+
+.box-section .box-card ul li {
+    display: block;
+    float: left;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+.box-section .box-card ul > li > ul > .tamañoLink {
+    display: block;
+    width: 411.05px !important;
+    height: 68px;
+    overflow: hidden;
+    text-overflow: ellipsis; /*añade ellipsis al final de un texto cuando no cabe en su contenedor [asdad....],
+    ellipsis no provoca el desbordamiento para eso hay que aplicar el overflow: hidden; u otra porpiedad*/
+}
+
+.box-section .box-card ul > li > ul > .tamañoLink > a {
+    width: 411.05px !important;
+    color: #0000ee;
+}
+
+.box-section .box-card ul li a {
+    font-size: 18px;
+}
+
+.box-section .box-card ul li a:hover {
+    text-decoration: underline;
+}
+
+.box-section .box-card ul li h3 {
+    margin-bottom: 12px;
+    color: #ffc000;
+}
+
+/** TEACHERS*/
+
+.fondo-blanco {
+    background-color: #ffffff;
+}
+
+.box-section .perfil {
+    display: block;
+    width: 65%;
+    padding-top: 5px !important;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: transparent;
+    margin: 0px auto;
+    padding: 40px;
+    margin-bottom: -150px;
+}
+
+.box-section .perfil .info {
+    display: block;
+    width: 595px;
+    height: auto;
+    padding: 15px;
+    float: left;
+}
+
+.box-section .perfil .info .gris {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    color: #73726c;
+}
+
+.box-section .perfil .info h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    color: #3c3b37;
+}
+
+.box-section .perfil .info .Profecion {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 17px;
+    color: #3c3b37;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.box-section .perfil .info .yo {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 23px;
+    color: #3c3b37;
+    margin-bottom: 15px;
+}
+
+.box-section .perfil .info p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #3c3b37;
+    margin-top: 5px;
+}
+
+.box-section .perfil .image {
+    display: block;
+    width: 205px;
+    padding: 15px;
+    float: right;
+}
+
+.box-section .perfil .image div,
+.box-section .perfil .image div > img {
+    width: 200px;
+    height: 200px;
+    border-radius: 900px;
+    overflow: hidden;
+    /* La Magia */
+    display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.box-section .perfil .image div > img {
+    margin: 0px !important;
+}
+
+.box-section .perfil .image a,
+.box-section .perfil .image a img {
+    display: block;
+    margin: 0 auto;
+    width: 75px;
+    height: 75px;
+}
+
+.box-section .perfil .image p {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    font-size: 20px;
+
+    opacity: 0;
+    transform: translateX(-150%);
+    transition: all 300ms;
+    color: #b53d3d;
+}
+
+.box-section .perfil .image #number1 {
+    bottom: 45px;
+    right: 200px;
+}
+
+.box-section .perfil .image #number2 {
+    top: 1096px;
+    right: 200px;
+}
+
+.box-section .perfil .image #number3 {
+    top: 1638px;
+    right: 200px;
+}
+
+.box-section .perfil .image #number4 {
+    top: 2179px;
+    right: 200px;
+}
+
+.box-section .perfil .image .whatsa:hover p {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.box-section .linea {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/** PAGINA SCHEDULE*/
+
+.box-section .box-card > h3 {
+    font-family: Raleway;
+    margin-bottom: 30px;
+}
+
+.box-section .box-card > div .table {
+    border: 1px solid black;
+    margin: 0 auto;
+    box-shadow: 0px 10px 15px rgb(161, 161, 161);
+}
+
+.box-section .box-card > div .table tr > th,
+.box-section .box-card > div .table tr > td {
+    border: 1px solid black;
+    font-family: Raleway;
+}
+
+.box-section .box-card > div .table tr > th {
+    padding: 8px;
+    text-align: center;
+}
+
+.box-section .box-card > div .table tr > td {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.box-section .box-card > div .table tr > td a {
+    text-decoration: none;
+    color: #0000ee;
+}
+
+.box-section .box-card > div .table tr > .title,
+.box-section .box-card > div .table tr > .break {
+    background-color: #02adb5;
+    font-family: FredokaOne;
+}
+
+.box-section .box-card > div .table tr > .break {
+    background-color: #2b3647;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.box-section .box-card > div .table tr > .hour,
+.box-section .box-card > div .table tr > .password {
+    background-color: #b53d3d;
+    color: white;
+}
+
+.box-section .box-card > div .table tr > th {
+    background-color: #ffc000;
+}
+
+.box-section .box-card > div .table tr > td > .link {
+    font-size: 14px;
+}
+
+.box-section .box-card > .horario {
+    margin-bottom: 60px;
+}
+
+.box-section .box-card > .end-groud {
+    margin-bottom: 0px;
+}
+
+/** PAGINA TOPICS*/
+
+.box-section .box-card > .week-title {
+    font-family: FredokaOne;
+    margin-left: 115px;
+    font-size: 30px;
+    background: url(../img/ilustracion2.png);
+    -webkit-background-clip: text; /*es una propiedad que permite aplicar una imagen de background al texto*/
+    background-clip: text;
+    color: transparent;
+}
+
+.box-section .box-card .week {
+    display: block;
+    margin: 20px 0px 70px 0px;
+    transition: all 600ms;
+}
+
+.box-section .box-card .week:hover {
+    transform: scale(1.1, 1.1);
+    margin-top: 40px;
+}
+
+.box-section .box-card table tr > .td-padding {
+    padding: 0px !important;
+    border: none !important;
+    border-bottom: 1px solid rgb(121, 119, 119) !important;
+}
+
+.box-section .box-card table tr td > .interna {
+    min-width: 132px;
+}
+
+.box-section .box-card table tr td > .topics,
+.box-section .box-card table tr td > .topics tr > td,
+.topics-fuera {
+    color: #02adb5;
+    font-family: FredokaOne !important;
+}
+
+.box-section .box-card table tr > td {
+    font-size: 15px;
+}
+
+.box-section .box-card table tr > .day {
+    color: #b53d3d;
+    font-family: FredokaOne !important;
+}
+
+.box-section .box-card table tr > .week2 {
+    border-bottom: none !important;
+}
+
+.box-section .box-card table tr td > .interna tr > #td-ancho {
+    height: 31px;
+}
+
+.box-section .box-card .week-ultima {
+    margin-bottom: 0px;
+}
+
+/** PAGINA STUDENTS*/
+
+.box-section .studentsss {
+    margin-bottom: -100px;
+}
+
+.box-section .box-card > #students {
+    display: block;
+    margin: 0px auto !important;
+}
+
+.box-section .box-card > #students > div {
+    display: block;
+    text-align: center;
+    float: left;
+    margin-bottom: 20px;
+    margin: 0px 18px 30px 17px;
+}
+
+.box-section .box-card > #students .student,
+.box-section .box-card > #students .student > img {
+    width: 200px;
+    height: 200px;
+    border-radius: 900px;
+    overflow: hidden;
+    /* La Magia */
+    display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.box-section .box-card > #students .student > img {
+    /*para especificar que la imagen no tenga margenes y no deforme el circulo*/
+    margin: 0px !important;
+}
+
+.box-section .box-card > #students .student {
+    margin-bottom: 10px;
+}
+
+/** PAGINA INFORMACIÓN*/
+.box-section .box-card > #anuncio,
+.box-section .box-card > #anuncio img {
+    display: block;
+    width: 540px;
+    height: 540px;
+    border: 10px solid white;
+    margin: 0 auto;
+}
+
+.box-section .box-card > #anuncio img {
+    box-shadow: 0px 10px 15px rgb(161, 161, 161);
+}
+
+/** PAGINA DE ONLINE ACTIVITIES*/
+.box-section .box-card .onliActivi table tr > .activitiesWeek {
+    font-family: FredokaOne;
+    background-color: #02adb5;
+    color: white;
+}
+
+.box-section .box-card .groupOnline {
+    letter-spacing: 2px;
+}
+
+.box-section .box-card .onliActivi table tr > .points {
+    text-align: center;
+}
+
+.box-section .box-card .onliActivi table tr > th,
+.box-section .box-card .onliActivi table tr > td {
+    font-size: 18px;
+}
+
+.box-section #onli {
+    margin-bottom: -150px;
+}
+
+/** PAGINA MISSION*/
+
+.box-section .box-card > #animacion > .desenfoque {
+    height: 170px;
+    padding-top: 10px;
+    animation: desenfocar 10s linear;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes desenfocar {
+    0% {
+        backdrop-filter: none;
+        background-color: none;
+    }
+    25% {
+        backdrop-filter: none;
+        background-color: none;
+    }
+    50% {
+        backdrop-filter: none;
+        background-color: none;
+    }
+    75% {
+        backdrop-filter: none;
+        background-color: none;
+    }
+    90% {
+        backdrop-filter: none;
+        background-color: none;
+    }
+}
+.box-section .box-card > #animacion {
+    width: 95.5%;
+    height: 170px;
+    border: 10px solid white;
+    box-shadow: 0px 0px 2px gray;
+    background-image: url(../img/mission1.png);
+    background-position: -277px -213px; /*el primer parametro es X y el segundo Y*/
+    margin: 20px auto;
+    overflow: hidden;
+
+    animation: backBanner 10s linear;
+}
+
+@keyframes backBanner {
+    /*genera el efecto o animación de movimiento del fondo*/
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: -277px -213px;
+    }
+}
+
+.box-section .box-card > #animacion > .desenfoque > h1 {
+    display: block;
+    font-size: 45px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: 27 auto;
+    margin-top: 26px;
+    text-shadow: 2px 2px 1px #4a4a4a;
+    text-align: center;
+    font-family: FredokaOne;
+    color: #02adb5;
+
+    animation: showText 10s linear;
+}
+
+@keyframes showText {
+    0% {
+        transform: translateX(-600%) scale(2, 2); /*translateX posiciona el elementos*/
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(600%) scale(2, 2); /*scale , aumenta el tamaño multiplicandolo en este caso por 5 tanto en X como en Y*/
+        opacity: 1;
+    }
+    75% {
+        transform: translateX(-600%) scale(2, 2);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%) scale(1, 1);
+        text-shadow: 2px 2px 1px #4a4a4a;
+        color: #02adb5;
+        opacity: 1;
+    }
+}
+
+/** GAMIFICACION*/
+
+.box-section .box-card > .controles video {
+    float: none !important;
+}
+.box-section .box-card > .controles {
+    text-align: center;
+}
+
+.box-section .gamificacion {
+    background-color: transparent !important;
+    min-height: 180px !important;
+    text-align: center;
+    padding-top: 0px !important;
+}
+
+.box-section .gamificacion > p > a {
+    color: blue;
+}
+
+.box-section .gamificacion #image-gamifi,
+.box-section .gamificacion #image-gamifi > img {
+    display: block;
+    position: absolute;
+    left: 450px;
+    top: 60px;
+}
+
+.box-section .gamificacion #image-gamifi > img {
+    width: 296px;
+    height: 456px;
+}

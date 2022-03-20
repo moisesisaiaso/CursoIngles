@@ -1,0 +1,690 @@
+/** FUENTES*/
+@font-face {
+    font-family: FredokaOne;
+    src: url(fonts/FredokaOne-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(fonts/Raleway-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: icons;
+    src: url(fonts/websymbols-regular-webfont.svg#WebSymbolsRegular) format("svg"),
+        url(fonts/websymbols-regular-webfont.eot);
+    src: url(fonts/websymbols-regular-webfont.eot?#iekix) format("embedded-opentype"),
+        url(fonts/websymbols-regular-webfont.woff) format("woff"),
+        url(fonts/websymbols-regular-webfont.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/** GENERALES*/
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+body {
+    background-color: #f7f7f7;
+}
+
+/** GENERAL - layout*/
+
+.titulos {
+    /*para titulos emcabezados*/
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 50px;
+    font-family: "Raleway", sans-serif;
+    word-spacing: 1px;
+    margin-bottom: 45px;
+}
+
+.cajas {
+    display: block;
+    padding-top: 100px;
+    width: 80%;
+    margin: 0px auto;
+}
+
+.title {
+    font-family: "FredokaOne", cursive;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+.paragraph {
+    font-family: "Raleway", sans-serif;
+    font-size: 21px;
+    line-height: 35px; /*esta propiedad no solo centra de manera verticar, sino que es el entrelineado para parrafos*/
+    word-spacing: 1px;
+    margin-bottom: 45px;
+}
+
+/** CABECERA*/
+.nav {
+    display: block;
+    position: fixed;
+    width: 96.2%;
+    height: 52px;
+    padding-left: 26px;
+    padding-right: 26px;
+}
+
+.navOne {
+    background-color: rgba(
+        9,
+        26,
+        47,
+        0.85
+    ); /*el cuarto parametro es para la transparencia, sin necesidad de hacer un opacity*/
+    /*opacity: 0.9;*/ /*es una manera de hacer transparencia en un fondo*/
+    z-index: 2;
+}
+
+.navTwo {
+    z-index: 3;
+}
+
+.navTwo ul > li {
+    display: block;
+    float: right;
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+.navTwo ul > li a {
+    display: block;
+    border: 1px solid white;
+    border-radius: 20px 20px;
+    height: 28px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 28px;
+    margin-top: 2px;
+    padding: 3px 15px 3px 15px;
+    font-family: "Raleway", sans-serif;
+    transition: 200ms;
+}
+
+.navTwo ul .select a {
+    font-size: 14px;
+}
+
+.navTwo ul .select a:hover {
+    background-color: white;
+    color: #a53838;
+}
+
+.navTwo ul .boton-red a {
+    background-color: #b53d3d;
+    font-weight: bold;
+}
+
+.navTwo ul .boton-red a:hover {
+    background-color: #a53838;
+    text-shadow: 0px 1px 3px grey;
+}
+
+/** LOGO*/
+.navTwo #logo {
+    float: left;
+    margin-left: 0px;
+}
+
+.navTwo #logo > a,
+.navTwo #logo > a img {
+    display: block;
+    width: 70px;
+    height: 64px;
+    border: none;
+    margin-top: -2px;
+}
+
+.navTwo #logo > a:hover {
+    color: #b53d3d;
+    transform: scale(1.1, 1.1); /*aplica el efecto de agrandar la letra cuando se hace hover*/
+    text-shadow: 1px 3px 2px rgb(44, 21, 21);
+}
+
+/** MENÚ DESPLEGABLE*/
+
+.navTwo > ul > li > ul {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    padding: 12px;
+}
+
+.navTwo > ul > li:hover > ul {
+    display: block;
+    background-color: white;
+    width: 401px;
+    height: 330px;
+    border-radius: 5px;
+    top: 46px;
+    right: 200px;
+    box-shadow: 0px 0px 2px gray;
+}
+
+.navTwo > ul > li:hover > ul > li {
+    float: left;
+    margin: 0px;
+}
+
+.navTwo > ul > li:hover > ul > li > a {
+    color: black;
+    width: 168px;
+    height: 30px;
+    line-height: 32px;
+    font-size: 12px;
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.navTwo > ul > li:hover > ul > li:hover a {
+    background-color: #02adb5;
+    color: white;
+}
+
+/* ^BANNER*/
+/** Fondo Banner*/
+#banner {
+    height: 800px;
+    background-image: url(../img/prueba.jpg);
+    background-size: 100% 100%; /*con esto se adacta la imagen total al contenedor*/
+}
+
+/** ENTRADA*/
+#banner > #entrada {
+    position: absolute;
+    top: 100px;
+    left: 120px;
+    font-size: 100px;
+    z-index: 1;
+}
+
+#banner > #entrada > p {
+    color: white;
+    margin-bottom: -20px;
+    text-shadow: 0px 0px 15px #0c0c0c;
+    letter-spacing: 2px;
+}
+
+#banner > #entrada > #learn {
+    animation: learn 2s linear;
+}
+
+@keyframes learn {
+    0% {
+        transform: translateX(-200%);
+    }
+
+    50% {
+        transform: translateX(0%);
+    }
+
+    55% {
+        transform: translateX(5%);
+    }
+
+    70% {
+        transform: translateX(3%);
+    }
+
+    85% {
+        transform: translateX(1%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+#banner > #entrada > #english {
+    animation: english 3s linear;
+}
+
+@keyframes english {
+    0% {
+        transform: translateX(-500%);
+    }
+
+    50% {
+        transform: translateX(0%);
+    }
+
+    55% {
+        transform: translateX(5%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/** boton*/
+.button a {
+    width: 186px;
+    height: 60px;
+    text-decoration: none;
+    outline: none;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 2, 2, 0.3);
+    font-family: "FredokaOne", cursive;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.button-primer > a {
+    transform: translateY(-20px);
+    animation: luminocidad 5s infinite linear;
+}
+
+@keyframes luminocidad {
+    0% {
+        box-shadow: 0px 0px 20px rgb(221, 24, 17);
+    }
+    25% {
+        box-shadow: 0px 0px 20px #ffc000;
+    }
+    50% {
+        box-shadow: 0px 0px 20px white;
+        transform: scale(
+            1.2,
+            1.2
+        ); /*ese efecto convinado con el transaleteY(-20px) de la caja hace un efecto de acercamiento, que hace parecer que al acercarse se agranda y al alejarse minimiza y se traslada de manera semivertical*/
+    }
+    75% {
+        box-shadow: 0px 0px 20px #02adb5;
+    }
+    100% {
+        box-shadow: 0px 0px 20px green;
+    }
+}
+
+#banner .button a {
+    position: absolute;
+    top: 475px;
+    left: 120px;
+    z-index: 1;
+}
+
+#banner .button a:hover,
+#resources .button a:hover {
+    text-shadow: 0px 0px 5px #081325;
+}
+
+#banner .button a:active,
+#resources .button a:active {
+    box-shadow: 0px 0px 10px #081325 inset;
+}
+
+/** CARTILLA*/
+.cards {
+    display: block;
+    width: 1089px;
+    height: 469px;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    left: 130px;
+    top: 660px;
+}
+
+.cards div {
+    float: left;
+}
+
+.cards #image-card,
+.cards #image-card img {
+    display: block;
+    width: 376px;
+    height: 438px;
+}
+
+.cards #image-card {
+    margin: 17px;
+}
+
+.cards #content {
+    display: block;
+    width: 610px;
+    height: 386px;
+    margin: 40px 0px 40px 40px;
+}
+
+.cards div #plataformas {
+    display: block;
+    width: 490px;
+    height: 110px;
+    margin-left: 10px;
+}
+
+.cards #content #wordwall {
+    width: 211px;
+    height: 42px;
+    padding-bottom: 19px;
+}
+
+.cards #content #live {
+    width: 80px;
+    height: 80px;
+    padding-bottom: 20px;
+}
+
+.cards #content #whatsaap {
+    width: 112px;
+    height: 108px;
+    padding-bottom: 12px;
+    margin-right: 0px;
+    margin-top: 3px;
+}
+
+.recreation {
+    margin-right: 25px;
+}
+
+.title {
+    font-family: "FredokaOne", cursive;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+.cards #content .n1,
+.n1 {
+    font-size: 35px;
+}
+
+.cards #content .n2 {
+    font-size: 27px;
+    margin-bottom: 7px;
+}
+
+/** DESCRIPTION*/
+.description {
+    display: block;
+    width: 88%;
+    margin-top: 400px !important;
+    margin: 0px auto;
+    background-color: white;
+    padding: 40px;
+}
+
+.description > div > img {
+    display: block;
+    position: absolute;
+    left: 802px;
+    top: 1143px;
+    z-index: 1px;
+}
+
+.description > div > p {
+    width: 80%;
+}
+
+/** HISTORY*/
+#history {
+    display: block;
+    min-height: 500px;
+    margin-top: 60px;
+    background-color: #ffc000;
+    padding: 70px 100px 70px 100px;
+}
+
+#history h2 {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+#history .intro {
+    margin-top: 90px;
+}
+
+#history .intro p {
+    width: 650px;
+    margin-right: 50px;
+}
+
+#history .intro #camara {
+    width: 412px;
+    height: 412px;
+    margin-top: -60px;
+}
+
+#history .intro p,
+#history .intro #camara {
+    display: block;
+    float: left;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+#history .controles {
+    display: block;
+    min-height: 215px;
+}
+
+#history .controles > button {
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 300ms;
+    margin-right: 12px;
+}
+
+#history button:hover {
+    transform: scale(1.5, 1.5);
+}
+
+#history button:active {
+    transform: scale(1, 1);
+}
+
+#history button > img {
+    transition: all 300ms;
+}
+
+#history button > .play-pause,
+#history .controles > .control1 {
+    width: 40px;
+    height: 40px;
+}
+
+#history button > .recargar,
+#history .controles > .control2 {
+    width: 30px;
+    height: 32px;
+    margin-bottom: 4px;
+}
+
+#history button > .maximizar,
+#history .controles > .control3 {
+    width: 36px;
+    height: 37px;
+    margin-bottom: 2px;
+}
+
+#history button > .minimizar,
+#history .controles > .control4 {
+    width: 31px;
+    height: 31px;
+    margin-bottom: 4px;
+}
+
+#history button > .normal,
+#history .controles > .control5 {
+    width: 38px;
+    height: 33px;
+    margin-bottom: 3px;
+}
+
+#history .controles p {
+    float: right;
+    width: 600px;
+    min-height: 150px;
+}
+
+#history .controles video {
+    box-shadow: 0px 0px 10px #081325;
+}
+
+#history .controles video {
+    float: left;
+}
+/*controles inverso*/
+#history .controlesRight {
+    margin-top: 10px;
+}
+
+#history .controlesRight button,
+#history .controlesRight video {
+    display: block;
+    float: right;
+}
+
+#history .controlesRight p {
+    display: block;
+    float: left;
+}
+
+/** SECCIÓN FINAL*/
+.top {
+    margin-top: 60px !important;
+    width: 70% !important;
+    background-color: transparent !important;
+}
+
+.top .tamaño {
+    display: block;
+    width: 340px;
+    height: 300px;
+    background-color: white;
+    padding: 40px;
+    position: relative;
+}
+
+.top #right {
+    float: right;
+    margin-top: 40px;
+}
+
+.top #right > h2 {
+    text-align: right;
+}
+
+.top #right > p {
+    margin-left: 135px !important;
+}
+
+.top #bottom {
+    margin-top: 320px;
+}
+
+.top div > p {
+    display: block;
+    width: 205px;
+    text-align: justify;
+}
+
+.box-card div > #ilustracion7 {
+    display: block;
+    width: 340px;
+    height: 492px;
+}
+
+.box-card div > #ilustracion5 {
+    display: block;
+    width: 500px;
+    height: 500px;
+}
+
+#box-ilustra1 {
+    position: absolute;
+    bottom: 90px;
+    left: 230px;
+}
+#box-ilustra2 {
+    position: absolute;
+    bottom: 0px;
+    right: 200px;
+}
+/** FOOTER*/
+footer {
+    width: 100%;
+    height: 400px;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 50px !important;
+    background-color: #333333;
+    padding-bottom: 10px;
+    color: white;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 2px grey;
+}
+
+#idea {
+    font-family: icons;
+    float: left;
+    margin-left: 25px;
+    color: white;
+    line-height: 50%;
+    font-size: 13px;
+}
+
+footer p > #interes {
+    color: #b53d3d;
+}
+
+#face,
+#youtu,
+#twitch {
+    font-family: icons;
+    font-size: 20px;
+    margin-right: 10px;
+    float: right;
+    color: white;
+    line-height: 30%;
+}
+
+#face {
+    margin-right: 25px;
+}
+
+.boxShadow {
+    box-shadow: 0px 10px 15px rgb(161, 161, 161);
+}
+
+/** footer modo claro*/
+#footerClaro {
+    background-color: white;
+    color: black;
+}
+
+#footerClaro .claro {
+    color: black;
+}
+
+/** imagen*/
+footer > img {
+    display: block;
+    width: 100%;
+    height: 328px;
+}
